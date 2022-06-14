@@ -26,6 +26,15 @@ public class WizardsAndWarriorsTests
         var warrior = new Warrior();
         Assert.False(warrior.Vulnerable());
     }
+    
+    [Fact]
+    [Task(3)]
+    public void Warrior_is_not_vulnerable()
+    {
+        var wizard = new Wizard();
+        wizard.PrepareSpell();
+        Assert.False(warrior.Vulnerable());
+    }
 
     [Fact]
     [Task(4)]
